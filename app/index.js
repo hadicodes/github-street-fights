@@ -1,15 +1,30 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+const React = require('react');
+const ReactDOM = require('react-dom');
 require('./index.css');
+const PropTypes = require('prop-types');
 
-class App extends React.Component {
+class Badge extends React.Component {
   render() {
     return (
       <div>
-        <h2>Hello Sohi!</h2>
+        <img src={this.props.img} />
+        <h1>Name: {this.props.name}</h1>
+        <h3>username: {this.props.username}</h3>
       </div>
-    )
+    );
   }
 }
+Badge.propTypes = {
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired
+};
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  <Badge
+    name="Tyler McGinnis"
+    username="tylermcginnis"
+    img="https://avatars0.githubusercontent.com/u/2933430?v=3&s=460"
+  />,
+  document.getElementById('app')
+);
