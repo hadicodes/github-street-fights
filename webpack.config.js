@@ -1,6 +1,5 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
   entry: './app/index.js',
   output: {
@@ -17,5 +16,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'app/index.html'
     })
-  ]
+  ],
+  mode: "development"
 };
