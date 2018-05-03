@@ -3,16 +3,7 @@ const ReactDOM = require('react-dom');
 require('./index.css');
 const PropTypes = require('prop-types');
 
-class App extends React.Component {
+const App = require('./components/App');
 
-  render() {
-
-    return (
-      <div>
-        <p>Hello World!!!</p>
-      </div>
-    )
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App
+/>, document.getElementById('app'));
