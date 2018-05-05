@@ -24,4 +24,5 @@ li {
 .languages li {
   cursor: pointer;
   margin: 10px;
+  font-weight: bold;
 }
