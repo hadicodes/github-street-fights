@@ -4,9 +4,9 @@ const selectLanguage = (props) => {
   <ul className='languages'>
         {languages.map(lang => {
           return <li
-            style={lang === props.state.selectedLanguage ? {color: '#d0021b'} : null}  
+            style={lang === props.selectedLanguage ? {color: '#d0021b'} : null}  
             key={lang}
-            onClick={() => props.updateLanguage(lang)}
+            onClick={() => props.onSelect(lang)}
           >{lang}</li>
         })}
       </ul>
@@ -32,6 +32,7 @@ class Popular extends React.Component {
       <div>
         <selectLanguage
           selectedLanguage={this.state.selectedLanguage}
+          onSelect={this.updateLanguage}
         />
       </div>
     )
