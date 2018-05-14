@@ -5,5 +5,5 @@ const PropTypes = require('prop-types');
 
 const App = require('./components/App');
 
-ReactDOM.render(<App
-/>, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
+
