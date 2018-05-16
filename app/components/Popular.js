@@ -28,9 +28,11 @@ class Popular extends React.Component {
     this.state = {
       selectedLanguage: 'All'
     };
+
+    this.updateLanguage = this.updateLanguage.bind(this);
   }
 
-  updateLanguage(lang) {
+  updateLanguage (lang)  {
     this.setState({
       selectedLanguage: lang
     });
@@ -41,12 +43,14 @@ class Popular extends React.Component {
       <div>
         <SelectLanguage
           selectedLanguage={this.state.selectedLanguage}
-          onSelect={this.updateLanguage.bind(this)}
+          onSelect={this.updateLanguage}
         />
       </div>
     );
   }
 }
+
+
 
 module.exports = Popular;
 
