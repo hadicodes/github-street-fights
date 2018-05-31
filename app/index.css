@@ -47,3 +47,7 @@ li {
   width: 150px;
   border-radius: 50%;
 }
+
+.space-list-items {
+  margin-bottom: 7px;
+}

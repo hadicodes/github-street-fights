@@ -52,14 +52,14 @@ const RepoGrid = (props) => {
   );
 };
 
-// RepoGrid.propTypes = {
-//   repos: PropTypes.array.isRequired
-// };
+RepoGrid.propTypes = {
+  repos: PropTypes.array.isRequired
+};
 
-// SelectLanguage.propTypes = {
-//   selectedLanguage: PropTypes.string.isRequired,
-//   onSelect: PropTypes.func.isRequired
-// };
+SelectLanguage.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired
+};
 
 // POPULAR Component
 class Popular extends React.Component {
