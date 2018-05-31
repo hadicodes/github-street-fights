@@ -38,7 +38,8 @@ class Popular extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedLanguage: 'All'
+      selectedLanguage: 'All',
+      repos: null
     };
 
     this.updateLanguage = this.updateLanguage.bind(this);
@@ -54,8 +55,9 @@ class Popular extends React.Component {
       repos: null
     });
 
-    api.fetchPopularRepos(lang)
-      .then(repos => console.log(repos))
+    api
+      .fetchPopularRepos(lang)
+      .then(repos => console.log(repos));
   }
 
   render() {
