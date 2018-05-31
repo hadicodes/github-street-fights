@@ -1,7 +1,8 @@
 {
   "name": "github-street-fight",
   "version": "1.0.0",
-  "description": "React app that puts github users agianst each other in fights",
+  "description":
+    "A React app that puts github users against each other in fights based on user stats",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open"
@@ -9,14 +10,8 @@
   "author": "Hadi Yousufi",
   "license": "MIT",
   "babel": {
-    "presets": [
-      "env",
-      "react",
-      "stage-1"
-    ],
-    "plugins": [
-      "transform-class-properties"
-    ]
+    "presets": ["env", "react", "stage-1"],
+    "plugins": ["transform-class-properties"]
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
