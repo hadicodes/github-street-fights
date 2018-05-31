@@ -1,4 +1,6 @@
 const React = require('react');
+const PropTypes = require('prop-types');
+const api = require('../utils/api');
 
 const SelectLanguage = props => {
   let languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
@@ -21,6 +23,16 @@ const SelectLanguage = props => {
     </ul>
   );
 };
+
+// RepoGrid.propTypes = {
+//   repos: PropTypes.array.isRequired
+// };
+
+// SelectLanguage.propTypes = {
+//   selectedLanguage: PropTypes.string.isRequired,
+//   onSelect: PropTypes.func.isRequired
+// };
+
 // POPULAR Component
 class Popular extends React.Component {
   constructor(props) {
@@ -32,10 +44,18 @@ class Popular extends React.Component {
     this.updateLanguage = this.updateLanguage.bind(this);
   }
 
-  updateLanguage (lang)  {
+  componentDidMount() {
+    this.updateLanguage(this.state.selectedLanguage)
+  }
+
+  updateLanguage(lang) {
     this.setState({
-      selectedLanguage: lang
+      selectedLanguage: lang,
+      repos: null
     });
+
+    api.fetchPopularRepos(lang)
+      .then(repos => console.log(repos))
   }
 
   render() {
@@ -49,7 +69,5 @@ class Popular extends React.Component {
     );
   }
 }
-
-
 
 module.exports = Popular;
