@@ -2,9 +2,13 @@ const React = require('react');
 
 
 const Nav = () => {
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+  return (
+  <ul className='nav'>
+    <li>Home</li>
+    <li>Fight</li>
+    <li>Popular</li>
+    </ul>
+  )
 }
+
+module.exports = Nav;
