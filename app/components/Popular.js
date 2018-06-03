@@ -2,6 +2,7 @@ const React = require('react');
 const PropTypes = require('prop-types');
 const api = require('../utils/api');
 
+
 const SelectLanguage = props => {
   let languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
 
@@ -24,7 +25,7 @@ const SelectLanguage = props => {
   );
 };
 
-const RepoGrid = (props) => {
+const RepoGrid = props => {
   return (
     <ul className="popular-list">
       {props.repos.map((repo, index) => {
@@ -82,8 +83,7 @@ class Popular extends React.Component {
       selectedLanguage: lang,
       repos: null
     });
-
-    api.fetchPopularRepos(lang).then(repos => this.setState({ repos: repos }));
+    api.fetchPopularRepos(lang).then((repos) => this.setState({ repos: repos }));
   }
 
   render() {
