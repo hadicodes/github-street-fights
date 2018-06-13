@@ -1,14 +1,27 @@
 const React = require('react');
 
+const NavLink = require('react-router-dom').NavLink;
 
 const Nav = () => {
   return (
-  <ul className='nav'>
-    <li>Home</li>
-    <li>Fight</li>
-    <li>Popular</li>
+    <ul className="nav">
+      <li>
+        <NavLink exact activeClassName="active" to="/">
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName="active" to="/fight">
+          Fight
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName="active" to="/popular">
+          Popular
+        </NavLink>
+      </li>
     </ul>
-  )
-}
+  );
+};
 
 module.exports = Nav;
