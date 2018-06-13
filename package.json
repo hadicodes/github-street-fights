@@ -1,5 +1,5 @@
 {
-  "name": "github-street-fight",
+  "name": "github-stat-fights",
   "version": "1.0.0",
   "description": "A React app that puts github users against each other in fights based on user stats",
   "main": "index.js",
