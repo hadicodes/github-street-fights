@@ -44,6 +44,7 @@ li {
   display: block;
   padding: 7px 0;
   margin: 10px auto;
+  text-decoration: none;
 }
 
 .button:hover:enabled {
