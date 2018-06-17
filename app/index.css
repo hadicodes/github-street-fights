@@ -8,7 +8,19 @@ body {
   margin: 0 auto;
 }
 
-ul.nav a {
+ul.nav li a {
+  text-decoration: none;
+  background-image: linear-gradient(
+    -225deg,
+    #a445b2 0%,
+    #d41872 52%,
+    #ff0066 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ul.space-list-items li a {
   text-decoration: none;
   background-image: linear-gradient(
     -225deg,
@@ -37,7 +49,7 @@ li {
     #ff0066 100%
   );
   border: none;
-  font-size: 16px;
+  font-size: 17px;
   border-radius: 3px;
   width: 200px;
   text-align: center;
@@ -45,6 +57,7 @@ li {
   padding: 7px 0;
   margin: 10px auto;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .button:hover:enabled {
