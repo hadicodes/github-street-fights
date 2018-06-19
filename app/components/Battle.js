@@ -10,8 +10,16 @@ class Battle extends React.Component {
       playerOneImage: null,
       playerTwoImage: null,
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
+
   }
   
+  handleSubmit(id, username) {
+    this.setState((() => {
+      let newState = {};
+  }))
+}
+
   render() {
     return (
       <div>
