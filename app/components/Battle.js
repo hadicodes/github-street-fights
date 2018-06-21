@@ -30,8 +30,13 @@ class Battle extends React.Component {
     return (
       <div>
         <div className="row">
-        {!playerOneName && <PlayerInput/>}
-        {!playerTwoName && <PlayerInput/>}
+          {!playerOneName && <PlayerInput
+            id='playerOne'
+            la
+          />}
+          {!playerTwoName && <PlayerInput
+          id='playerTwo'
+          />}
         </div>
       </div>
     )
