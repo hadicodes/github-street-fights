@@ -2,11 +2,26 @@ var React = require('react');
 
 
 class PlayerInput extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      username: ''
+    }
+  }
+
   render() {
     return (
-
+      <form className='column'>
+        <label htmlFor="'username" className="header">{this.props.label}</label>
+        <input type="text"
+          id='username'
+          placeholder='github username'
+          autoComplete='off'
+          value={this.state.username}
+        />
+      </form>
     )
-  }
 }
 class Battle extends React.Component {
   constructor(props) {
